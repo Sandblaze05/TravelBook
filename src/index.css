@@ -5,3 +5,7 @@ body {
   @apply text-slate-300;
   @apply min-h-screen;
 }
+
+a {
+  @apply cursor-pointer
+}
