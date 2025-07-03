@@ -1,0 +1,7 @@
+@import 'tailwindcss';
+
+body {
+  @apply bg-gradient-to-br from-slate-900 to-slate-700;
+  @apply text-slate-300;
+  @apply min-h-screen;
+}
