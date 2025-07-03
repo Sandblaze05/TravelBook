@@ -1,9 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const Login = () => {
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
+
   const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const user = {email: email, password: password};
+  };
 
   return (
     <motion.div
@@ -39,6 +49,7 @@ const Login = () => {
               Email Address
             </label>
             <input
+              onChange={(e) => setEmail(e.target.value)}
               id="email"
               type="email"
               placeholder="you@example.com"
@@ -54,6 +65,7 @@ const Login = () => {
               Password
             </label>
             <input
+              onChange={(e) => setPassword(e.target.value)}
               id="password"
               type="password"
               placeholder="********"
@@ -62,7 +74,7 @@ const Login = () => {
           </div>
 
           <button
-            type="submit"
+            onClick={handleSubmit}
             className="w-full py-3 bg-blue-700 text-white rounded-lg hover:bg-blue-800 dark:bg-blue-500 dark:hover:bg-blue-600 transition text-lg font-medium"
           >
             Log In

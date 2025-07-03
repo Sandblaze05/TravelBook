@@ -27,7 +27,7 @@ const Landing = () => {
           </button>
           <button
             onClick={() => navigate("/signup")}
-            className="px-4 py-2 bg-blue-700 text-white dark:bg-blue-500 dark:hover:bg-blue-600 rounded-lg hover:bg-blue-800 transition"
+            className="px-4 py-2 hidden sm:block bg-blue-700 text-white dark:bg-blue-500 dark:hover:bg-blue-600 rounded-lg hover:bg-blue-800 transition"
           >
             Sign Up
           </button>

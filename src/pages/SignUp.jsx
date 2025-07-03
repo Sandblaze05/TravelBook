@@ -9,6 +9,14 @@ const SignUp = () => {
 
   const navigate = useNavigate();
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const user = {name: name, email: email, password: password}
+    // post request to backend
+    // console.log(user)
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -84,7 +92,7 @@ const SignUp = () => {
           </div>
 
           <button
-            type="submit"
+            onClick={handleSubmit}
             className="w-full py-3 bg-blue-700 text-white rounded-lg hover:bg-blue-800 dark:bg-blue-500 dark:hover:bg-blue-600 transition text-lg font-medium"
           >
             Sign Up
